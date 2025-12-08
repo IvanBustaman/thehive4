@@ -43,6 +43,7 @@ sudo mkdir -p /var/log/thehive
 
 # 5. Configuración
 echo -e "${GREEN}⚙️ Instalando configuración...${NC}"
+sudo mkdir -p /etc/thehive
 sudo cp ./configs/application.conf /etc/thehive/application.conf
 
 # Generar nueva llave secreta para esta instalación
