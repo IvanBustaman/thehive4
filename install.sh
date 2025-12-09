@@ -46,6 +46,9 @@ echo -e "${GREEN}⚙️ Instalando configuración...${NC}"
 sudo mkdir -p /etc/thehive
 sudo cp ./configs/application.conf /etc/thehive/application.conf
 
+# Copiar configuración de logs
+sudo cp ./configs/logback.xml /etc/thehive/logback.xml
+
 # Generar nueva llave secreta para esta instalación
 echo -e "${GREEN}🔐 Generando nueva llave de seguridad...${NC}"
 NEW_SECRET=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 64 | head -n 1)
